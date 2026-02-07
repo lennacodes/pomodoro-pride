@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Fredoka';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Fredoka-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Fredoka-Bold.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #E40303, #FF8C00, #FFED00, #008026, #004CFF, #732982);
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 460px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+}
+
+.title {
+  font-family: 'Fredoka', 'Segoe UI', system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 15px;
+  opacity: 0.75;
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.btn-start {
+  padding: 14px 36px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.btn-start:hover {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+.btn-start:active {
+  transform: translateY(0) scale(0.97);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Timer View -->
+  <div id="view-timer" class="view active">
+    <div class="timer-card">
+      <div class="timer-display" id="timer-display">25:00</div>
+      <div class="timer-mode" id="timer-mode">Focus</div>
+    </div>
+    <div class="controls">
+      <button class="btn btn-primary" id="btn-start">Start</button>
+      <div class="controls-row">
+        <button class="btn btn-secondary" id="btn-short">Short Break</button>
+        <button class="btn btn-secondary" id="btn-long">Long Break</button>
+      </div>
+      <button class="btn btn-ghost" id="btn-reset">Reset</button>
+    </div>
+  </div>
+
+  <!-- Settings View -->
+  <div id="view-settings" class="view">
+    <div class="settings-tabs">
+      <button class="settings-tab active" data-panel="flag">Flag</button>
+      <button class="settings-tab" data-panel="textcolor">Text Color</button>
+      <button class="settings-tab" data-panel="support">Support Me</button>
+    </div>
+    <div class="settings-panel active" id="panel-flag">
+      <div class="flag-grid" id="flag-grid"></div>
+    </div>
+    <div class="settings-panel" id="panel-textcolor">
+      <div class="color-picker-area">
+        <div class="cp-sv-wrap">
+          <canvas id="cp-sv" width="260" height="160"></canvas>
+          <div class="cp-sv-cursor" id="cp-sv-cursor"></div>
+        </div>
+        <div class="cp-hue-wrap">
+          <canvas id="cp-hue" width="260" height="18"></canvas>
+          <div class="cp-hue-cursor" id="cp-hue-cursor"></div>
+        </div>
+        <div class="cp-result">
+          <div class="cp-swatch" id="cp-swatch"></div>
+          <span class="color-hex" id="color-hex">#ffffff</span>
+        </div>
+        <button class="btn btn-ghost" id="btn-reset-color">Reset to Auto</button>
+      </div>
+    </div>
+    <div class="settings-panel" id="panel-support">
+      <div class="support-area">
+        <div class="support-heart">&#9829;</div>
+        <p class="support-text">If you enjoy Pomodoro Pride, consider supporting the developer!</p>
+        <a href="https://buymeacoffee.com/lennacodes" target="_blank" rel="noopener" class="btn btn-support">Buy Me a Coffee</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Bar -->
+  <nav class="tab-bar">
+    <button class="tab-btn active" data-view="timer">Timer</button>
+    <button class="tab-btn" data-view="settings">Settings</button>
+    <button class="tab-btn" data-view="stats">Stats</button>
+  </nav>
+
+  <script src="../shared/constants.js"></script>
+  <script src="../shared/flags.js"></script>
+  <script src="../shared/storage.js"></script>
+  <script src="../shared/theme.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

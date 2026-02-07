@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Pride - Stats</title>
+  <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">Pomodoro Pride Stats</h1>
+
+    <!-- All-Time Overview -->
+    <div class="card">
+      <h2 class="card-title">All Time</h2>
+      <div class="stats-row stats-row-4">
+        <div class="stat-box">
+          <div class="stat-number" id="stat-all-pomodoros">0</div>
+          <div class="stat-label">Pomodoros</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="stat-all-time">0h</div>
+          <div class="stat-label">Focus Time</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="stat-streak">0</div>
+          <div class="stat-label">Day Streak</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="stat-best-streak">0</div>
+          <div class="stat-label">Best Streak</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly Calendar -->
+    <div class="card">
+      <div class="week-header">
+        <button class="week-nav" id="btn-prev-week" title="Previous week">&lsaquo;</button>
+        <button class="card-title week-label" id="week-label">This Week</button>
+        <button class="week-nav" id="btn-next-week" title="Next week" disabled>&rsaquo;</button>
+      </div>
+      <div class="week-grid" id="week-grid"></div>
+      <div class="week-summary" id="week-summary"></div>
+    </div>
+
+    <!-- Daily Breakdown -->
+    <div class="card">
+      <h2 class="card-title" id="day-title">Today</h2>
+      <div class="stats-row stats-row-4">
+        <div class="stat-box">
+          <div class="stat-number" id="stat-focus">0</div>
+          <div class="stat-label">Pomodoros</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="stat-day-time">0m</div>
+          <div class="stat-label">Focus Time</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="stat-short">0</div>
+          <div class="stat-label">Short Breaks</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="stat-long">0</div>
+          <div class="stat-label">Long Breaks</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Session Log -->
+    <div class="card">
+      <h2 class="card-title">Session Log</h2>
+      <div class="session-log" id="session-log">
+        <div class="empty-state">No sessions yet. Start a timer!</div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button class="btn" id="btn-export">Export JSON</button>
+      <label class="btn btn-import-label">
+        Import JSON
+        <input type="file" id="btn-import" accept=".json" hidden>
+      </label>
+      <button class="btn btn-danger" id="btn-reset">Reset Stats</button>
+    </div>
+  </div>
+
+  <script src="../shared/constants.js"></script>
+  <script src="../shared/flags.js"></script>
+  <script src="../shared/storage.js"></script>
+  <script src="../shared/theme.js"></script>
+  <script src="stats.js"></script>
+</body>
+</html>
