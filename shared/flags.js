@@ -29,6 +29,16 @@ window.PomodoroPride.flags = [
     colors: ["#5BCEFA", "#F5A9B8", "#FFFFFF", "#F5A9B8", "#5BCEFA"]
   },
   {
+    id: "transfeminine",
+    name: "Transfeminine",
+    colors: ["#73DEFF", "#FFE5ED", "#FFAFC7", "#F47694", "#FFAFC7", "#FFE5ED", "#73DEFF"]
+  },
+  {
+    id: "transmasculine",
+    name: "Transmasculine",
+    colors: ["#F47694", "#CAE8F5", "#9DD7ED", "#55CDFC", "#9DD7ED", "#CAE8F5", "#F47694"]
+  },
+  {
     id: "bisexual",
     name: "Bisexual",
     colors: ["#D60270", "#9B4F96", "#0038A8"],
